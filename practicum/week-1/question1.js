@@ -9,8 +9,8 @@ var runningSum = function(input) {
    var sumArray = [];
    var sum = 0;
    
-   for (i = 0; i < runningSum.length; i++){
-     sum += runningSum[i]
+   for (i = 0; i < input.length; i++){
+     sum += input[i]
      sumArray.push(sum);
    }
    
