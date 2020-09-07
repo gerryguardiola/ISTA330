@@ -16,7 +16,7 @@ for (i = 0; i < A.length; i++){
    for (j = 0; j < B.length; j++){
         if (A.charAt(i) == B.charAt(j)){
           charSim += 1;
-          break;
+          j = B.length;
         }
    }
 }
