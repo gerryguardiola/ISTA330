@@ -12,5 +12,14 @@ output: [[1,4], [2,5], [3,6]]
 */
 
 var transpose = function(M) {
+let rows = input[0].length;
+let cols = input.length;
+let array = [];
 
+  for (i = 0; i < cols; i++){
+    for (j = 0; j < rows; j++){
+      array[rows][cols] = input[cols][rows];
+    }
+  }
+  return array;
 };
