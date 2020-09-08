@@ -18,6 +18,7 @@ let dInt = -1;
 let count = 0;
   
   for(i = 0; i < input.length; i++){
+    count = 0;
     for(j = 0; j < input.length; j++){
       if (input[i] == input[j]){
         count += 1;
