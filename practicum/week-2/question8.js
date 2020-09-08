@@ -14,12 +14,12 @@ output: 3
 
 var d_integer = function(input) {
 let dArray = [];
-let dInt = 0;
-let count = 1;
+let dInt = -1;
+let count = 0;
   
   for(i = 0; i < input.length; i++){
     for(j = 0; j < input.length; j++){
-      if (i != j && input[i] == input[j]){
+      if (input[i] == input[j]){
         count += 1;
       }
     }
@@ -27,7 +27,9 @@ let count = 1;
       dArray.push(i);
     }
   }
-  dInt = dArray[0];
+  if (dArray.length < 1){
+    return -1;
+  }
   if (dArray.length > 1){
     for (k = 0; k < dArray.length; k++){
       if (dInt < dArray[k]){
