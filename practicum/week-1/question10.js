@@ -13,10 +13,10 @@ var maxMinusMin = function(n) {
  let max = -1;
  for (i = 0; i < digitArray.length; i++){
    if (parseInt(digitArray[i]) > max){
-     max = parseInt(digitArray[i])
+     max = parseInt(digitArray[i]);
    }
    if (parseInt(digitArray[i]) < min){
-     min = parseInt(digitArray[i])
+     min = parseInt(digitArray[i]);
    }
  }
  return (max - min);
