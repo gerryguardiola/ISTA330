@@ -9,12 +9,15 @@ output: [1, 0, 1, 2]
 
 var biggerAndEven = function(input) {
 var biggerAndEven = 0;
+var arrayBE = [];
   for (i = 0; i < input.length; i++){
+    biggerAndEven = 0;
     for (j = 0; j < input.length; j++){
       if (i != j &&  input[i] < input[j] && input[j] % 2 == 0){
         biggerAndEven += 1;
       }
     }
+    arrayBE.push(biggerAndEven);
   }
-  return biggerAndEven;
+  return arrayBE;
 };
