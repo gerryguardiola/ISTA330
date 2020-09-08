@@ -31,11 +31,9 @@ let count = 1;
   if (dArray.length > 1){
     for (k = 0; k < dArray.length; k++){
       if (dInt < dArray[k]){
-        return dArray[k]
+        dInt = dArray[k]
       }
     }
   }
-  else{
-    return dInt;
-  }
+  return dInt;
 };
