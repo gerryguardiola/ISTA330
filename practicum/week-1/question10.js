@@ -8,5 +8,16 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
- return 1;
+ let digitArray = (""+n).split("");
+ let min = 10;
+ let max = -1;
+ for (i = 0; i < digitArray.length; i++){
+   if (parseInt(digitArray[i]) > max){
+     max = parseInt(digitArray[i])
+   }
+   if (parseInt(digitArray[i]) < min){
+     min = parseInt(digitArray[i])
+   }
+ }
+ return (max - min);
 };
