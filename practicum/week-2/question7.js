@@ -18,7 +18,7 @@ let array = [];
 
   for (i = 0; i < cols; i++){
     for (j = 0; j < rows; j++){
-      array[rows][cols] = input[cols][rows];
+      array[j][i] = input[i][j];
     }
   }
   return array;
