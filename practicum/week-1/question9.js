@@ -9,7 +9,7 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-var string = "";
+let string = "";
   for (i = 0; i < shuffleIndices.length; i++){
     for (j = 0; j < shuffleIndices.length; j++){
       if (j == shuffleIndices[i]){
