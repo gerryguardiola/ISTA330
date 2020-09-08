@@ -6,8 +6,8 @@ output: 3
 */
 
 var median = function(input) {
-  var index1 = 0;
-  var index2 = 0;
+  let index1 = 0;
+  let index2 = 0;
 if (input.length % 2 != 0){
   index1 = (input.length-1) / 2;
   return input[index1];
