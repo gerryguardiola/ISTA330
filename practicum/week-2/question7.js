@@ -15,7 +15,9 @@ var transpose = function(M) {
 let rows = input[0].length;
 let cols = input.length;
 let array = [];
-
+for (k = 0; k < rows; k++){
+  array[k] = [];
+}
   for (i = 0; i < cols; i++){
     for (j = 0; j < rows; j++){
       array[j][i] = input[i][j];
