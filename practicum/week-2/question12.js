@@ -9,13 +9,14 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-if (n == 0){
-  return 0;
+let n1 = 1;
+let n2 = 0;
+let temp = 0;
+while (n >= 0){
+    temp = n1;
+    n1 += n2;
+    n2 = temp;
+    n-= 1;
 }
-if (n == 1){
-  return 1;
-}
-else{
-  return (function(n-1) + function(n-2));
-}
+  return n2; 
 };
