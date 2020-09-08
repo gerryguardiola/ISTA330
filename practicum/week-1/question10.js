@@ -8,21 +8,12 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-let mod = 10;
-let digitArray = [n % mod];
-let temp = n % mod;
-let i = 0;
 let max = 0; 
 let min = 10;
-  
-while (temp != n){
-   mod = mod * 10;
-   temp = n % mod - digitArray[i];
-   digitArray.push(n % mod - temp);
-   temp = n % mod;
-   i += 1;
- }
-  
+let string = n.toString();
+for (i = 0; i < string.length; i++){
+    digitArray.push(parseInt(string[i]));
+}
 for (j = 0; j < digitArray.length; j++){
   if (digitArray[j] > max){
     max = digitArray[j];
