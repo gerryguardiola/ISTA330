@@ -8,8 +8,8 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-var biggerAndEven = 0;
-var arrayBE = [];
+let biggerAndEven = 0;
+let arrayBE = [];
   for (i = 0; i < input.length; i++){
     biggerAndEven = 0;
     for (j = 0; j < input.length; j++){
