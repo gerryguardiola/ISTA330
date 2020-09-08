@@ -23,7 +23,7 @@ let count = 0;
         count += 1;
       }
     }
-    if (count == i){
+    if (count == input[i]){
       dArray.push(i);
     }
   }
