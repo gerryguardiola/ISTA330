@@ -8,5 +8,5 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-
+ return 1;
 };
