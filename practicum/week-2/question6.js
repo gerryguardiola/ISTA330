@@ -24,4 +24,5 @@ for (i = 0; i < input.length; i++){
      return input[i];
    }
 }
+return -1;
 };
