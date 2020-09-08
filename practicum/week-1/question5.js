@@ -12,7 +12,7 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-var ops = 0;
+let ops = 0;
   while(n != 0){
      if (n % 4 == 0){
       n = n / 4;
