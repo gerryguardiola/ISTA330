@@ -9,16 +9,17 @@ output: 7 - 2 = 5
 
 var maxMinusMin = function(n) {
 var mod = 10;
-var temp = 0;
 var digitArray = [n % mod];
+var temp = n % mod;
 var i = 0;
 var max = 0; 
 var min = 0;
   
 while (temp != n){
    mod = mod * 10;
-   digitArray.push(n % mod - digitArray[i]);
-   temp = n % mod
+   temp = n % mod - digitArray[i];
+   digitArray.push(n % mod - temp);
+   temp = n % mod;
    i += 1;
  }
   
