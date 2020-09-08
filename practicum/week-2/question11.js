@@ -15,9 +15,14 @@ output: 1
 
 var d_count = function(input1, input2, d) {
 let dCount = 0;
+let diff = 0;
 for (i = 0; i < input1.length; i++){
   for (j = 0; j < input2.length; j++){
-    if (input1[i]-input2[j] > d){
+    diff = input1[i]-input2[j];
+    if (diff < 0){
+      diff = diff * -1;
+    }
+    if (diff > d){
       dCount += 1;
     }
   }
