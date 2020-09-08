@@ -11,7 +11,7 @@ output: 'hello'
 var suffleString = function(input, shuffleIndices) {
 var string = "";
   for (i = 0; i < shuffleIndices.length; i++){
-    if (i < shuffleIndices.length-1){
+    if (shuffleIndices[i] < shuffleIndices.length-1){
        string += input.substring(shuffleIndices[i], shuffleIndices[i+1]);
     }
     else{
