@@ -12,7 +12,7 @@ let max = 0;
 let min = 10;
 let string = n.toString();
 for (i = 0; i < string.length; i++){
-    digitArray.push(parseInt(string[i]));
+    digitArray.push(parseInt(string.charAt(i)));
 }
 for (j = 0; j < digitArray.length; j++){
   if (digitArray[j] > max){
