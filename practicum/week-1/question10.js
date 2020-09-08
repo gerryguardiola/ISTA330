@@ -22,7 +22,7 @@ while (temp != n){
    i += 1;
  }
   
-for (j = 0; j < digitArray; ){
+for (j = 0; j < digitArray; j++){
   if (digitArray[j] > max){
     max = digitArray[j];
   }
