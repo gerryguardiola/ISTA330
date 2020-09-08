@@ -14,15 +14,15 @@ var maxMinusMin = function(n) {
  let min = 10;
  
  for(i = 0; i < s.length; i++){
-  digitArray.push(s.charAt(i));
+  digitArray.push(parseInt(s[i])));
  }
  
  for(j = 0; j < digitArray.length; j++){
-  if (parseInt(digitalArray[j]) > max){
-   max = parseInt(digitalArray[j]);
+  if (digitalArray[j] > max){
+   max = digitalArray[j];
   }
-  if (parseInt(digitalArray[j]) < min){
-   min = parseInt(digitalArray[j]);
+  if (digitalArray[j] < min){
+   min = digitalArray[j];
   }
  }
  let val = max - min;
