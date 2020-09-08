@@ -11,7 +11,11 @@ output: 'hello'
 var suffleString = function(input, shuffleIndices) {
 var string = "";
   for (i = 0; i < shuffleIndices.length; i++){
-       string += input.charAt(shuffleIndices[i]);
+    for (j = 0; j < shuffleIndices.length; j++){
+      if (j == shuffleIndices[i]){
+        string += input.charAt(shuffleIndices.indexOf(i))
+      }
+    }
   }
   
   return string
