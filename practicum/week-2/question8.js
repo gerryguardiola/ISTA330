@@ -13,5 +13,29 @@ output: 3
 */
 
 var d_integer = function(input) {
-
+let dArray = [];
+let dInt = 0;
+let count = 1;
+  
+  for(i = 0; i < input.length; i++){
+    for(j = 0; j < input.length; j++){
+      if (i != j && input[i] == input[j]){
+        count += 1;
+      }
+    }
+    if (count == i){
+      dArray.push(i);
+    }
+  }
+  dInt = dArray[0];
+  if (dArray.length > 1){
+    for (k = 0; k < dArray.length; k++){
+      if (dInt < dArray[k]){
+        return dArray[k]
+      }
+    }
+  }
+  else{
+    return dInt;
+  }
 };
