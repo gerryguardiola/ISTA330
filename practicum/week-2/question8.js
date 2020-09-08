@@ -24,7 +24,7 @@ let count = 0;
       }
     }
     if (count == input[i]){
-      dArray.push(i);
+      dArray.push(input[i]);
     }
   }
   if (dArray.length < 1){
