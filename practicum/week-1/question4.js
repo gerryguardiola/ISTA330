@@ -11,7 +11,7 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 */
 
 var howManyCommon = function(A, B) {
-var charSim = 0;
+let charSim = 0;
 for (i = 0; i < A.length; i++){
    for (j = 0; j < B.length; j++){
         if (A.charAt(i) == B.charAt(j)){
