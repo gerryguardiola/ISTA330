@@ -12,7 +12,7 @@ var F = function(n) {
 let n1 = 1;
 let n2 = 0;
 let temp = 0;
-while (n >= 0){
+while (n > 0){
     temp = n1;
     n1 += n2;
     n2 = temp;
