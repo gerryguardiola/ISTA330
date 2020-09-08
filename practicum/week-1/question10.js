@@ -8,12 +8,12 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-var mod = 10;
-var digitArray = [n % mod];
-var temp = n % mod;
-var i = 0;
-var max = 0; 
-var min = 0;
+let mod = 10;
+let digitArray = [n % mod];
+let temp = n % mod;
+let i = 0;
+let max = 0; 
+let min = 10;
   
 while (temp != n){
    mod = mod * 10;
