@@ -20,7 +20,7 @@ var kStepAway = function(input, k) {
         return false;
       }
       if (input[i] == 1 && temp >= k){
-        temp = 1;
+        temp = 0;
         continue;
       }
       temp++;
