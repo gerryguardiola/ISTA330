@@ -25,5 +25,20 @@ output:  4
 */
 
 var longestNested = function(A) {
-
+     let index = 0;
+     let count = 0;
+     let arr = [];
+     
+     for (i = 0; i < A.length; i++){
+          if (index > A.length){
+               return count;
+          }
+          if (!arr.includes(A[index])){
+               index = A[index];
+               count++;
+          }
+          else{
+               return count;
+          }
+     }
 };
