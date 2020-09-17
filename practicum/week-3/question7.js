@@ -17,5 +17,33 @@ output: 7
 */
 
 var minPath = function(M) {
-
+  let r = M.length;
+  let c = M[0].length;
+  let ans = 0;
+  
+   for (let i = 1; i < r; i++){
+    M[i][0] += M[i-1][0];
+   }
+   for (let j = 1; j < c; j++){
+    M[0][j] += M[0][j-1];
+   }
+  
+   smallestNum(M, r, c);
+   ans = M[r-1][c-1];
+  
+   return ans;
 };
+
+var smallestNum = (M, r, c) =>{
+  for (let i = 1; i < r; i++) {
+    for (let j = 1; j < c; j++){
+      if (M[i-1][j] < M[i][j-1] ){
+        M[i][j] = M[i][j] + M[i-1][j];
+      }
+      else{
+        M[i][j] = M[i][j] + M[i][j-1];
+      }
+    }
+   }
+  return;
+}
