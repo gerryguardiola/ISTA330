@@ -25,7 +25,7 @@ var powerSet = function(input) {
  return ans;
 };
 
-var subsetsDFS = function(input, ans, i = 0, subset = []){
+var subsetsDFS = (input, ans, i = 0, subset = []) => {
     ans.push(subset);
  
     for (; i < input.length; i++)
