@@ -19,5 +19,17 @@ Example:
 */
 
 var powerSet = function(input) {
-
+ let ans = [];
+ subsetsDFS(input, ans);
+ 
+ return ans;
 };
+
+var subsetsDFS = function(input, ans, i = 0, subset = []){
+    ans.push(subset);
+ 
+    for (; i < input.length; i++)
+        subsetsDFS(input, ans, i + 1, subset.push(input[i]));
+ 
+    return;
+}
