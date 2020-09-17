@@ -25,10 +25,10 @@ var howManyTeams = function(input) {
    for (let i = 0; i + 2 < len; i++) {
        for (let j = i + 1; j + 1 < len; j++) {
            for (let k = j + 1; k < len; k++) {
-               if (input[i] < input[j] && input[j] < input[k]){
+               if (input[i] < input[j] && input[j] < input[k]  && k < len){
                  num++;
                }
-                if (input[i] > input[j] && input[j] > input[k]){ 
+                if (input[i] > input[j] && input[j] > input[k] && k < len){ 
                  num++;
                }
            }
