@@ -12,10 +12,12 @@ output: true
 
 var isPalindrome = function(s) {   
   let i = 0; 
+  let arr = s.split(" ");
+  let string = s.join("");
   let j = s.length - 1;
   while (i < j) {
-   let firstChar = s[i].toLowerCase()
-   let lastChar = s[j].toLowerCase()
+   let firstChar = string[i].toLowerCase()
+   let lastChar = string[j].toLowerCase()
         
    if (firstChar.match(/^[a-z0-9]+$/i) == false){
      i++;
