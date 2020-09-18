@@ -11,5 +11,23 @@ output: true
 */
 
 var isPalindrome = function(s) {
+  if (s == ""){
+    return true;
+  }
+  s = s.toLowerCase();
+  let arr = s.split(" ");
+  let string = s.join("")
+  
+  return recursivePalindrome(string);
+};
 
+var recursivePalindrome = (string) => {
+  if (string.length <= 1){
+    return true;
+  }
+  
+  if (string.charAt(0) != string.chatAt(string.length - 1)){
+    return false;
+  }
+  return recursivePalindrome(string.substring(1, string.length -1))
 };
