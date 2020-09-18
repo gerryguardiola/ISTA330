@@ -13,8 +13,9 @@ output: true
 var isPalindrome = function(s) {   
   let i = 0; 
   let arr = s.split(" ");
-  let string = arr.join('');
+  let string = arr.join("");
   let j = string.length - 1;
+  
   while (i < j) {
    let firstChar = string[i].toLowerCase()
    let lastChar = string[j].toLowerCase()
