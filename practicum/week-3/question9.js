@@ -20,7 +20,7 @@ var minMoves = function(A) {
    val += 1; 
    moves++; 
   }
-  unique[A[i]] = true;
+  unique[val] = true;
  }
  
   return moves;
