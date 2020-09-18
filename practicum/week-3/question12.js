@@ -11,5 +11,30 @@ Example:
 */
 
 var isCrossing = function(s) {
-
+    let grid = [];
+    let coord = "";
+    x = 0;
+    y = 0;
+    
+    for(i = 0; i < s.length; i++){
+        if (s.charAt(i) == "N"){
+            x = x - 1;
+        }
+        if (s.charAt(i) == "E"){
+            y = y + 1;
+        }
+        if (s.charAt(i) == "S"){
+            x = x + 1;
+        }
+        if (s.charAt(i) == "W"){
+            y = y - 1;
+        }
+        coord = x+""+y;
+        
+        if(grid.includes(coord)){
+            return true;
+        }
+        grid.push(coord);
+    }
+    return false;
 };
