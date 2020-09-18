@@ -20,16 +20,16 @@ Example:
 
 var powerSet = function(input) {
  let ans = [];
- subset(input, ans);
+ subsetMaker(input, ans);
  
  return ans;
 };
 
-var subset = (input, ans, count = 0, subset = []) => {
+var subsetMaker = (input, ans, count = 0, subset = []) => {
     ans.push(subset);
  
     for (; count < input.length; count++){
-        subset(input, ans, count + 1, subset.concat(input[i]));
+        subsetMaker(input, ans, count + 1, subset.concat(input[count]));
     }
     return;
 }
