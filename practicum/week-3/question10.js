@@ -17,8 +17,8 @@ var isPalindrome = function(s) {
   s = s.toLowerCase();
   let arr = s.split(" ");
   let string = s.join("")
-  
-  return recursivePalindrome(string);
+  let boolean = recursivePalindrome(string);
+  return boolean
 };
 
 var recursivePalindrome = (string) => {
