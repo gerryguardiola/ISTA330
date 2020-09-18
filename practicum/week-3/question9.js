@@ -10,18 +10,18 @@ input: [1,2,2]
 output: 1
 */
 
-var minMoves = function(A) {
- let unique = {}; 
+var minMoves = function(A) { 
  let moves = 0;
- 
- A.forEach(num => {
-    while (unique[num]) { 
-     num++; 
-     moves++; 
-    }
-  
-    unique[num] = true;
-  });
+ let unique = {}; 
+ let val = 0;
+ for (i = 0; i < A.length; i++){
+  val = A[i];
+  while (unique[A[i]]) { 
+   val++; 
+   moves++; 
+  }
+  unique[A[i]] = true;
+ }
  
   return moves;
 };
