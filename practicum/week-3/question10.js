@@ -18,6 +18,8 @@ var isPalindrome = function(s) {
   let firstChar = "";
   let lastChar = "";
   while (i != j) {  
+   firstChar = string[i].toLowerCase();
+   lastChar = string[j].toLowerCase();
    if (!firstChar.match(/^[a-z0-9]+$/i)){
      i++;
      continue;
