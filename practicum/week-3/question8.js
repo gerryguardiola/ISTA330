@@ -13,5 +13,28 @@ output: [0,0,1,1,2,2]
 */
 
 var sortColors = function(input) {
+  let temp = 0;
+   while(!isSorted(input)){
+      for (i = 0; i < input.length; i++){
+         for (j = i + 1; j < input.length; j++){
+           if (input[i] > input[j]){
+             temp = input[j];
+             input[j] = input[i];
+             input[i] = temp;
+           }
+         }
+      }
+   }
+  return input;
+};
 
+var isSorted = (input) => {
+  for (i = 0; i < input.length; i++){
+    for (j = i + 1; j < input.length; j++){
+      if (input[i] > input[j]){
+        return false;
+      }
+    }
+  }
+  return true;
 };
