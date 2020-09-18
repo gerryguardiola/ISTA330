@@ -14,27 +14,27 @@ var isPalindrome = function(s) {
   if (s.length == 0){
     return true;
   }
-  let str = s.toLowerCase();
-  let arr = s.split(" ");
-  let string = arr.join("")
-  let boolean = recursivePalindrome(string);
-  return boolean
-};
-
-var recursivePalindrome = (string) => {
-  if (string.length <= 1){
-    return true;
+    
+  let i = 0, 
+  let j = s.length - 1;
+  while (i < j) {
+   let firstChar = s[i].toLowerCase()
+   let lastChar = s[j].toLowerCase()
+        
+   if (!firstChar.match(/^[a-z0-9]+$/i)){
+     i++;
+   }     
+   else if (!lastChar.match(/^[a-z0-9]+$/i)){ 
+     j--;
+   }
+   else if (firstChar !== lastChar){
+     return false
+   }     
+   else { 
+     i++; 
+     j--; 
+   }
   }
-  if (string.chatAt(0) == '-' || string.chatAt(0) == '?' ||  string.chatAt(0) == ','){
-    return recursivePalindrome(string.substring(1));
-  }
-  if (string.chatAt(string.length -1 ) == '-' || string.chatAt(string.length -1) == '?' 
-      ||  string.chatAt(string.length -1) == ','){
-    return recursivePalindrome(string.substring(0, string.length - 1));
-  }
-  
-  if (string.charAt(0) != string.chatAt(string.length - 1)){
-    return false;
-  }
-  return recursivePalindrome(string.substring(1, string.length -1));
+    
+  return true
 };
