@@ -13,21 +13,21 @@ Example:
 var isCrossing = function(s) {
     let grid = ["00"];
     let coord = "";
-    x = 0;
-    y = 0;
+    let x = 0;
+    let y = 0;
     
     for(i = 0; i < s.length; i++){
-        if (s.charAt(i) == "N"){
-            x = x - 1;
-        }
-        if (s.charAt(i) == "E"){
+        if (s.charAt(i) == "N"){  
             y = y + 1;
         }
-        if (s.charAt(i) == "S"){
+        if (s.charAt(i) == "E"){   
             x = x + 1;
         }
-        if (s.charAt(i) == "W"){
+        if (s.charAt(i) == "S"){
             y = y - 1;
+        }
+        if (s.charAt(i) == "W"){
+            x = x - 1;
         }
         coord = x+""+y;
         
