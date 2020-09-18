@@ -11,7 +11,7 @@ output: true
 */
 
 var isPalindrome = function(s) {
-  if (s == ""){
+  if (s.length == 0){
     return true;
   }
   let str = s.toLowerCase();
