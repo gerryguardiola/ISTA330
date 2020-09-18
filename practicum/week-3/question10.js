@@ -26,7 +26,7 @@ var isPalindrome = function(s) {
    else if (lastChar.match(/^[a-z0-9]+$/i)  == false){ 
      j--;
    }
-   else if (firstChar !== lastChar){
+   else if (firstChar != lastChar){
      return false;
    }     
    else { 
