@@ -16,8 +16,8 @@ var minMoves = function(A) {
  let val = 0;
  for (i = 0; i < A.length; i++){
   val = A[i];
-  while (unique[A[i]]) { 
-   val+=1; 
+  while (unique[val]) { 
+   val += 1; 
    moves++; 
   }
   unique[A[i]] = true;
