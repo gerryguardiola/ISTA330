@@ -29,7 +29,7 @@ var isCrossing = function(s) {
         if (s.charAt(i) == "W"){
             x = x - 1;
         }
-        coord = "["+ x + ", " + y + "]";
+        coord = x + "" + y;
         
         if(grid.includes(coord)){
             return true;
