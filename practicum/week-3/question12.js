@@ -11,7 +11,7 @@ Example:
 */
 
 var isCrossing = function(s) {
-    let grid = [];
+    let grid = ["00"];
     let coord = "";
     x = 0;
     y = 0;
