@@ -21,17 +21,24 @@ var minPath = function(M) {
   let c = M[0].length;
   let ans = 0;
   
-   for (let i = 1; i < r; i++){
-    M[i][0] += M[i-1][0];
-   }
-   for (let j = 1; j < c; j++){
-    M[0][j] += M[0][j-1];
-   }
+  if (r == c){
+    for (let i = 1; i < r; i++){
+      M[i][0] += M[i-1][0];
+      M[0][i] += M[0][i-1];
+    }
+  }
+  else{
+    for (let i = 1; i < r; i++){
+      M[i][0] += M[i-1][0];
+    }
+    for (let j = 1; j < c; j++){
+      M[0][j] += M[0][j-1];
+    }
+  }
+  smallestNum(M, r, c);
+  ans = M[r-1][c-1];
   
-   smallestNum(M, r, c);
-   ans = M[r-1][c-1];
-  
-   return ans;
+  return ans;
 };
 
 var smallestNum = (M, r, c) =>{
