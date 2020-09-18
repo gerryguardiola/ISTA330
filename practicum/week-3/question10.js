@@ -15,11 +15,11 @@ var isPalindrome = function(s) {
   let arr = s.split(" ");
   let string = arr.join("");
   let j = string.length - 1;
-  
-  while (i < j) {
-   let firstChar = string[i].toLowerCase()
-   let lastChar = string[j].toLowerCase()
-        
+  let firstChar = "";
+  let lastChar = "";
+  while (i != j) {
+   firstChar = string[i].toLowerCase()
+   lastChar = string[j].toLowerCase()      
    if (firstChar.match(/^[a-z0-9]+$/i) == false){
      i++;
    }     
