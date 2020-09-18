@@ -33,7 +33,7 @@ var longestNested = function(A) {
           if (index > A.length){
                return count;
           }
-          if (!arr.includes(A[index])){
+          if (arr.includes(A[index])  == false){
                index = A[index];
                arr.push(index);
                count++;
