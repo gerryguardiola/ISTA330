@@ -14,7 +14,7 @@ var minMoves = function(A) {
  let unique = {}; 
  let moves = 0;
  
- list.forEach(num => {
+ A.forEach(num => {
     while (unique[num]) { 
      num++; 
      moves++; 
