@@ -10,25 +10,21 @@ input: 'Was it a car or a cat I saw'
 output: true
 */
 
-var isPalindrome = function(s) {
-  if (s.length == 0){
-    return true;
-  }
-    
+var isPalindrome = function(s) {   
   let i = 0, 
   let j = s.length - 1;
   while (i < j) {
    let firstChar = s[i].toLowerCase()
    let lastChar = s[j].toLowerCase()
         
-   if (!firstChar.match(/^[a-z0-9]+$/i)){
+   if (firstChar.match(/^[a-z0-9]+$/i) == false){
      i++;
    }     
-   else if (!lastChar.match(/^[a-z0-9]+$/i)){ 
+   else if (lastChar.match(/^[a-z0-9]+$/i)  == false){ 
      j--;
    }
    else if (firstChar !== lastChar){
-     return false
+     return false;
    }     
    else { 
      i++; 
@@ -36,5 +32,5 @@ var isPalindrome = function(s) {
    }
   }
     
-  return true
+  return true;
 };
