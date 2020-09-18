@@ -11,7 +11,7 @@ output: true
 */
 
 var isPalindrome = function(s) {   
-  let i = 0, 
+  let i = 0; 
   let j = s.length - 1;
   while (i < j) {
    let firstChar = s[i].toLowerCase()
