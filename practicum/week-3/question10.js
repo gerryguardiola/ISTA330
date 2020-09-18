@@ -11,5 +11,30 @@ output: true
 */
 
 var isPalindrome = function(s) {
+  if (s == ""){
+    return true;
+  }
+  s = s.toLowerCase();
+  let arr = s.split(" ");
+  let string = arr.join("")
+  let boolean = recursivePalindrome(string);
+  return boolean
+};
+
+var recursivePalindrome = (string) => {
+  if (string.length <= 1){
+    return true;
+  }
+  if (string.chatAt(0) == '-' || string.chatAt(0) == '?' ||  string.chatAt(0) == ','){
+    recursivePalindrome(string.substring(1));
+  }
+  if (string.chatAt(string.length -1 ) == '-' || string.chatAt(string.length -1) == '?' 
+      ||  string.chatAt(string.length -1) == ','){
+    recursivePalindrome(string.substring(0, string.length - 1));
+  }
   
+  if (string.charAt(0) != string.chatAt(string.length - 1)){
+    return false;
+  }
+  recursivePalindrome(string.substring(1, string.length -1));
 };
