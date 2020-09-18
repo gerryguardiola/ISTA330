@@ -11,15 +11,17 @@ output: 1
 */
 
 var minMoves = function(A) {
- let unique = [];
- for (i = 0; i < A.length; i++){
-   if (unique.includes(A[i])){
-     continue;
-   }
-   else{
-     unique.push(A[i]);
-   }
- }
+ let unique = {}; 
+ let moves = 0;
  
-  return (A.length - unique.length);
+ list.forEach(num => {
+    while (unique[num]) { 
+     num++; 
+     moves++; 
+    }
+  
+    unique[num] = true;
+  });
+ 
+  return moves;
 };
