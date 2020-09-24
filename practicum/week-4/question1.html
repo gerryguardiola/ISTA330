@@ -67,13 +67,13 @@
        var b = "<table> <tr>";
        for (var i = 0; i < flowers.length; i++){
     	   if (i == (flowers.length / 2)-1 || i == flowers.lenght -1){
-    		   b += "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>"+ "</td>" + "</tr>"
+    		   b += "<td>" + "<img src =images/"+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>"+ "</td>" + "</tr>"
     	   }
     	   else if (i == flowers.length / 2){
-    		   b += "<tr>" + "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>"
+    		   b += "<tr>" + "<td>" + "<img src =images/"+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>"
     	   }
     	   else{
-    	   	   b += "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>" 
+    	   	   b += "<td>" + "<img src =images/"+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>" 
     	   }
        }
        b += "</table>"
