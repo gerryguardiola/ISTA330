@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    	flowersDiv { text-align: justify;
+    	}
+    	
+    </style>
 </head>
 <body>
     <div id="question">
@@ -26,10 +31,18 @@
            For each flower, you should show the image
            and under the image display its name.
         */
+       var element = document.getElementById("flowersDiv");
+ 
        class Flower {
            constructor(name, pictureName) {
                this.name = name;
                this.picture = pictureName;
+           }
+           getPicture(){
+        	   return this.picture;
+           }
+           getName(){
+        	   return this.name;
            }
        }
        let daffodil = new Flower('Daffodil', 'daffodil.png');
@@ -51,6 +64,16 @@
              rose,
              waterlily
        ];
+       var b = "";
+       for (var i = 0; i < flowers.length; i++){
+    	   if (i == (flowers.length / 2)-1){
+    		   b += "<img src ="+ flowers[i].getPicture()+">" + flowers[i].getName()+ "<br>"
+    	   }
+    	   else{
+    	   	   b += "<img src ="+ flowers[i].getPicture()+">" + flowers[i].getName()
+    	   }
+       }
+       element.innerHTML = b;
     </script>
 </body>
 </html>
