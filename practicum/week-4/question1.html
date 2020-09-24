@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    	flowersDiv { text-align: center;
+    	flowersDiv { text-align: justify;
     	}
     	
     </style>
@@ -64,15 +64,19 @@
              rose,
              waterlily
        ];
-       var b = "";
+       var b = "<table> <tr>";
        for (var i = 0; i < flowers.length; i++){
-    	   if (i == (flowers.length / 2)-1){
-    		   b += "<img src =images/"+ flowers[i].getPicture()+">" + flowers[i].getName()+ "<br>"
+    	   if (i == (flowers.length / 2)-1 || i == flowers.lenght -1){
+    		   b += "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>"+ "</td>" + "</tr>"
+    	   }
+    	   else if (i == flowers.length / 2){
+    		   b += "<tr>" + "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>"
     	   }
     	   else{
-    	   	   b += "<img src =images/"+ flowers[i].getPicture()+">" + flowers[i].getName()
+    	   	   b += "<td>" + "<img src ="+ flowers[i].getPicture()+">" + "<p>"+flowers[i].getName()+ "</p>" +"</td>" 
     	   }
        }
+       b += "</table>"
        element.innerHTML = b;
     </script>
 </body>
