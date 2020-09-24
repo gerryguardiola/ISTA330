@@ -67,10 +67,10 @@
        var b = "";
        for (var i = 0; i < flowers.length; i++){
     	   if (i == (flowers.length / 2)-1){
-    		   b += "<img src ="+ flowers[i].getPicture()+">" + flowers[i].getName()+ "<br>"
+    		   b += "<img src =images/"+ flowers[i].getPicture()+">" + flowers[i].getName()+ "<br>"
     	   }
     	   else{
-    	   	   b += "<img src ="+ flowers[i].getPicture()+">" + flowers[i].getName()
+    	   	   b += "<img src =images/"+ flowers[i].getPicture()+">" + flowers[i].getName()
     	   }
        }
        element.innerHTML = b;
