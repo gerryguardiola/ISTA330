@@ -75,31 +75,122 @@
         waterlily   cherryblossom  daffodil    daisy 
         
         */
-        class Flower {
-            constructor(name, pictureName) {
-                this.name = name;
-                this.picture = pictureName;
-            }
-        }
-        let daffodil = new Flower('Daffodil', 'daffodil.png');
-        let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-        let lily = new Flower('Lily', 'lily.png');
-        let daisy = new Flower('Daisy', 'daisy.png');
-        let sunflower = new Flower('Sunflower', 'sunflower.png');
-        let tulip = new Flower('Tulip', 'tulip.png');
-        let rose = new Flower('Rose', 'rose.png');
-        let waterlily = new Flower('Water lily', 'waterlily.png');
-
-        let flowers = [
-            daffodil,
-            cherryblossom,
-            lily,
-            daisy,
-            sunflower,
-            tulip,
-            rose,
-            waterlily
-        ];
+        var element = document.getElementById("flowersDiv");
+ 
+       class Flower {
+           constructor(name, pictureName) {
+               this.name = name;
+               this.picture = pictureName;
+           }
+           getPicture(){
+        	   return this.picture;
+           }
+           getName(){
+        	   return this.name;
+           }
+       }
+       let daffodil = new Flower('Daffodil', 'daffodil.png');
+       let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
+       let lily = new Flower('Lily', 'lily.jpg');
+       let daisy = new Flower('Daisy', 'daisy.jpg');
+       let sunflower = new Flower('Sunflower', 'sunflower.png');
+       let tulip = new Flower('Tulip', 'tulip.png');
+       let rose = new Flower('Rose', 'rose.png');
+       let waterlily = new Flower('Water lily', 'waterlily.png');
+       
+       let flowers = [
+             daffodil,
+             cherryblossom,
+             lily,
+             daisy,
+             sunflower,
+             tulip,
+             rose,
+             waterlily
+       ];
+       function changeDisplay(flowers){
+    	   var b = "<table> <tr>";
+    	   
+    	   for (var i = 0; i < flowers.length; i++){
+        	   if (i == (flowers.length / 2)-1 || i == flowers.lenght -1){
+        		   b += "<td>" + "<button id=" + flowers[i].getName().substring(0, 4) + ">" + 
+        		   "<img src =images/"+ flowers[i].getPicture()+">" + "</button>" + 
+        		   "<p>"+flowers[i].getName()+ "</p>"+ "</td>" + "</tr>"
+        	   }
+        	   else if (i == flowers.length / 2){
+        		   b += "<tr>" + "<td>" + "<button id=" + flowers[i].getName().substring(0, 4) + 
+        		   ">" + "<img src =images/"+ flowers[i].getPicture()+">" + "</button>" + 
+        		   "<p>"+flowers[i].getName()+ "</p>" +"</td>"
+        	   }
+        	   else{
+        	   	   b += "<td>" + "<button id=" + flowers[i].getName().substring(0, 4) + ">" +
+        	   	   "<img src =images/"+ flowers[i].getPicture()+">" + "</button>" + 
+        	   	   "<p>"+flowers[i].getName()+ "</p>" +"</td>" 
+        	   }
+           }
+           b += "</table>"
+           
+           element.innerHTML = b;
+       }
+       
+       changeDisplay(flowers);
+     
+       var daff = document.getElementById("Daff");
+       daff.addEventListener("click", reorderDaff);
+       var cherry = document.getElementById("Cher");
+       cherry.addEventListener("click", reorderCherry);
+       var lilyEl = document.getElementById("Lily");
+       lilyEl.addEventListener("click", reorderLily);
+       var daisyEl = document.getElementById("Dais");
+       daisyEl.addEventListener("click", reorderDaisy);
+       var sunflow = document.getElementById("Sunf");
+       sunflow.addEventListener("click", reorderSun);
+       var tul = document.getElementById("Tuli");
+       tul.addEventListener("click", reorderTulip);
+       var roseEl = document.getElementById("Rose");
+       roseEl.addEventListener("click", reorderRose);
+       var water = document.getElementById("Wate");
+       water.addEventListener("click", reorderWater);
+        
+       function reorderDaff() {
+    	   var flowersArr = [daffodil, daisy, lily, rose, sunflower, tulip, waterlily, cherryblossom];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderCherry(){
+    	   var flowersArr = [cherryblossom, daffodil, daisy, lily, rose, sunflower, tulip, waterlily];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderLily(){
+    	   var flowersArr = [lily, rose, sunflower, tulip, waterlily, cherryblossom, daffodil, daisy];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderDaisy(){
+    	   var flowersArr = [daisy, lily, rose, sunflower, tulip, waterlily, cherryblossom, daffodil];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderSun(){
+    	   var flowersArr = [sunflower, tulip, waterlily, cherryblossom, daffodil, daisy, lily, rose];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderTulip(){
+    	   var flowersArr = [tulip, waterlily, cherryblossom, daffodil, daisy, lily, rose, sunflower];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderRose(){
+    	   var flowersArr = [rose, sunflower, tulip, waterlily, cherryblossom, daffodil, daisy, lily];
+    	   changeDisplay(flowersArr);
+       }
+       
+       function reorderWater(){
+    	   var flowersArr = [waterlily, cherryblossom, daffodil, daisy, lily, rose, sunflower, tulip];
+    	   changeDisplay(flowersArr);
+       }
     </script>
 </body>
 
